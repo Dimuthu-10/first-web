@@ -23,7 +23,7 @@ const namelist = () =>{
             age: 26
           },
           picture: {
-            medium: "https://www.marketing91.com/wp-content/uploads/2016/01/download-1.jpg",
+            medium: "https://randomuser.me/api/portraits/men/75.jpg",
           },
     };
     return(
