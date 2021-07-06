@@ -2,7 +2,6 @@ import React from 'react';
 import Items from './namelistItems'
 
 
-
 const namelist = () =>{
     return(
       <React.Fragment>
