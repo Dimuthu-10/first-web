@@ -45,13 +45,17 @@ const item =()=>{
     },
 ];
   return NameList.map((listItem)=>{
-    return(<Items
-      Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
-      Gender={listItem.gender}
-      City={listItem.location.city}
-      Email={listItem.email}
-      avatar={listItem.picture.medium} 
-    />)
+    return(
+      <div className="p-2">
+        <Items
+        Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
+        Gender={listItem.gender}
+        City={listItem.location.city}
+        Email={listItem.email}
+        avatar={listItem.picture.medium} 
+      />
+      </div>
+    )
       
     })
   };
