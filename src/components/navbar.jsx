@@ -2,7 +2,10 @@ import React from'react';
 
 function navbar(){
     return (
-        <h1>Name List</h1>
+        <nav className="navbar navbar-light bg-light">
+            <span className="navbar-brand mb-0 h1">Name List</span>
+        </nav>
+        
     )
 }
 
