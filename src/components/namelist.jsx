@@ -1,29 +1,10 @@
 import React from 'react';
 import Items from './namelistItems'
-import { useState } from 'react';
 
-
-
-const namelist = () =>{
-    return(
-      <React.Fragment>
-        <div className="container mt-3">
-          <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn btn-primary">Add User</button>
-          </div>
-         
-          <ul className="list-group list-group-flush">
-            {Item()}
-          </ul>
-        </div>
-      </React.Fragment>
-       
-    );
-}
 
 const Item =()=>{
 
-  const [nameList,setNameList] = useState([
+  const NameList =[
     {
       gender: "male",
       name: {title: "Mr", first: "brad",last: "gibson"},
@@ -48,22 +29,49 @@ const Item =()=>{
       dob: {date: "1970-08-01T09:22:30.326Z",age: 51},
       picture: {medium: "https://randomuser.me/api/portraits/women/77.jpg",},
     },
-]);
+    {
+      gender: "male",
+      name: {title: "Mr", first: "Väinö",last: "Ylitalo"},
+      location: {street: "9278 new road",city: "kilcoole",state: "waterford",postcode: "93027"},
+      email: "vaino.ylitalo@example.com",
+      dob: {date: "1993-07-20T09:44:18.674Z",age: 26},
+      picture: {medium: "https://randomuser.me/api/portraits/men/81.jpg",},
+    }
+];
 
-  return nameList.map((listItem)=>{
+
+  return NameList.map( (listItem) => {
     return(
-      <div className="p-2">
-        <Items
-          Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
-          Gender={listItem.gender}
-          City={listItem.location.city}
-          Email={listItem.email}
-          avatar={listItem.picture.medium} 
-        />
-      </div>
-    )
-      
-    })
-  };
+    <div className="p-2">
+     <Items
+       Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
+       Gender={listItem.gender}
+       City={listItem.location.city}
+       Email={listItem.email}
+       avatar={listItem.picture.medium} 
+     />
+   </div>
+ )})
+    }
+    
+
+  const namelist = () =>{
+    return(
+      <React.Fragment>
+        <div className="container mt-3">
+          <div className="d-grid gap-2 col-6 mx-auto">
+            <button className="btn btn-primary"  >Add User</button>
+          </div>
+         
+          <ul className="list-group list-group-flush">
+            {Item()}
+          </ul>
+        </div>
+      </React.Fragment>
+       
+    );
+}
+
+
 
 export default namelist;
