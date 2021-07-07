@@ -1,13 +1,14 @@
 import Namelist from "./components/namelist"
 import './App.css';
 import Navbar from "./components/navbar";
+import React from 'react';
 
 function App() {
   return (
-    <div>
+    <React.Fragment>
       <Navbar/>
       <Namelist />
-    </div>
+    </React.Fragment>
   );
 }
 
