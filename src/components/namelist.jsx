@@ -1,24 +1,29 @@
 import React from 'react';
 import Items from './namelistItems'
+import { useState } from 'react';
+
 
 
 const namelist = () =>{
     return(
       <React.Fragment>
         <div className="container mt-3">
+          <div className="d-grid gap-2 col-6 mx-auto">
+            <button className="btn btn-primary">Add User</button>
+          </div>
+         
           <ul className="list-group list-group-flush">
-            {item()}
+            {Item()}
           </ul>
         </div>
-        
-        
       </React.Fragment>
        
     );
 }
 
-const item =()=>{
-  const NameList = [
+const Item =()=>{
+
+  const [nameList,setNameList] = useState([
     {
       gender: "male",
       name: {title: "Mr", first: "brad",last: "gibson"},
@@ -43,17 +48,18 @@ const item =()=>{
       dob: {date: "1970-08-01T09:22:30.326Z",age: 51},
       picture: {medium: "https://randomuser.me/api/portraits/women/77.jpg",},
     },
-];
-  return NameList.map((listItem)=>{
+]);
+
+  return nameList.map((listItem)=>{
     return(
       <div className="p-2">
         <Items
-        Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
-        Gender={listItem.gender}
-        City={listItem.location.city}
-        Email={listItem.email}
-        avatar={listItem.picture.medium} 
-      />
+          Name={listItem.name.title + ". " + listItem.name.first + " " + listItem.name.last}
+          Gender={listItem.gender}
+          City={listItem.location.city}
+          Email={listItem.email}
+          avatar={listItem.picture.medium} 
+        />
       </div>
     )
       
