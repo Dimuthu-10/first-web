@@ -58,10 +58,7 @@ const Item =()=>{
   const namelist = () =>{
     return(
       <React.Fragment>
-        <div className="container mt-3">
-          <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn btn-primary"  >Add User</button>
-          </div>
+        
          
           <ul className="list-group list-group-flush">
             {Item()}
