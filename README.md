@@ -11,8 +11,7 @@ I have created person details cards and i have added some styles using bootstrap
 - Bootstrap
 
 ## Demo of my website
-- ![demo](https://drive.google.com/file/d/18Mr08cSZLWj6dwUDkw5BSMP7QDtEuIiq/view?usp=sharing)
-
+- ![demo](public/demo/firstweb.png)
 I am not going to develop this site any more. Because i had to get some understanding how react works. I have gained it through this project. if you are beginner i can highly recommend this type of web site to learn basic things of <b>React</b>.
 <br/>
 <br/>
