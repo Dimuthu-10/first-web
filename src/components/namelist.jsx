@@ -58,8 +58,7 @@ const Item =()=>{
   const namelist = () =>{
     return(
       <React.Fragment>
-        
-         
+         <div className="container">
           <ul className="list-group list-group-flush">
             {Item()}
           </ul>
